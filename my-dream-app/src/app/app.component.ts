@@ -25,6 +25,13 @@ export class AppComponent {
   toggleHobbies() {   //El metodo niega al metodo mostrar hobbies
     this.showHobbies = !this.showHobbies;
   }
+  
+  newHobby(hobby: any) {    //recibe el parametro hobby del formulario
+    console.log(hobby.value);  //lo muestra en la consola del navegador
+    this.hobbies.push(hobby.value);   //añade a la lista de hobbys que creamos
+    hobby.value = "";   
+    return false;   //retorna false para que no recargue la pagina, pq sino desaparece
+  }
   //showHobbies() {   //creamos el metodo para mostrar los hobbies con el uso de un if
   //  return true;
   //}

@@ -21,7 +21,9 @@
 </div>
 
 <br>
-
+<form (submit)="newHobby(hobby)"> <!--- ejcute e metodo y envie el parametro que recibe del input --->
+  <input type="text" placeholder="Ingresa tu hobby" #hobby> <!--- el #hobby es como se envia la referencia al metodo newHobby --->
+</form>
 
 
 <div class="black">
