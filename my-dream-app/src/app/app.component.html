@@ -8,9 +8,10 @@
   <h2> {{ name }} </h2>
   <h2> {{ email }} </h2>
 
+  <button (click)="toggleHobbies()" class="btn"> Mostrar Hobbies </button> <!--- las acciones del boton se colocan entre parentesis --->
 
-  <div *ngIf="showhobbies" class="component2">    <!--- IF --->
-    <h3> hobbies: </h3>
+  <div *ngIf="showHobbies" class="component2">    <!--- IF --->
+    <h3> Hobbies: </h3>
     <ul>
       <li *ngFor="let hobby of hobbies"> {{ hobby }} </li>  <!--- FOR --->
     </ul>
@@ -18,6 +19,10 @@
   <br>
   <a href="{{ webpage }}" target="_blank"> Visita mi sitio Web </a>   <!--- URL web --->
 </div>
+
+<br>
+
+
 
 <div class="black">
   <h1> {{ title }}</h1> 

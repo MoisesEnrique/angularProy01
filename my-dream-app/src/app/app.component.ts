@@ -5,22 +5,31 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',  //para llamar el component html
   styleUrls: ['./app.component.css']    //para llamar el component css
 })
+
 export class AppComponent {
   title = 'my-dream-app';
   name: string;   //definimos el tipo de la variable
   email;
   webpage: string;
   hobbies: string[];  //arreglo de strings
-
-
+  showHobbies: boolean;   //variable para usarlo con el boton
+  
   constructor() {   //constructor que se instancia al inicio
     this.name = 'Moises Enrique';    //definimos la variables
     this.email = 'moises@unsa.edu.pe';
     this.webpage = 'http://www.unsa.edu.pe';
     this.hobbies = ["Futbol", "Programacion", "Netflix"];   //para utilizar el for
+    this.showHobbies = false;   //se inicia en falso para no mostrar hasta hacer click al boton
   }
 
-  showhobbies() {   //creamos el metodo para mostrar los hobbies con el uso de un if
-    return true;
+  toggleHobbies() {   //El metodo niega al metodo mostrar hobbies
+    this.showHobbies = !this.showHobbies;
   }
+  //showHobbies() {   //creamos el metodo para mostrar los hobbies con el uso de un if
+  //  return true;
+  //}
+
+
+
 }
+    
