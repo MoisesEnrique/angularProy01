@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  users = ["Pablo", "Pedro", "Marcos", "Lucas"];   //lista de users
+  activated = false;  // variable booleana
+
   title = 'my-dream-app';
   name: string;   //definimos el tipo de la variable
   email;
