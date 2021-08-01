@@ -12,6 +12,7 @@ export class AppComponent {
 
   title = 'my-dream-app';
   name: string;   //definimos el tipo de la variable
+  age: number;
   email;
   webpage: string;
   hobbies: string[];  //arreglo de strings
@@ -19,6 +20,7 @@ export class AppComponent {
   
   constructor() {   //constructor que se instancia al inicio
     this.name = 'Moises Enrique';    //definimos la variables
+    this.age = 42;
     this.email = 'moises@unsa.edu.pe';
     this.webpage = 'http://www.unsa.edu.pe';
     this.hobbies = ["Futbol", "Programacion", "Netflix"];   //para utilizar el for
