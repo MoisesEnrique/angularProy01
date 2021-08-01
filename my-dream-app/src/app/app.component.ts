@@ -51,6 +51,13 @@ export class AppComponent {
     }
   }
 
+  addUser(newUser:any){
+    this.users.push(newUser.value);   //añadir a la lista, con value extraigo el valor del objeto
+    newUser.value = '';   //limpiar caja de texto
+    newUser.focus();
+    return false;   //para no recargar la web
+  }
+
 
 }
     

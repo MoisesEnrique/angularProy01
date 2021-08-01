@@ -41,9 +41,16 @@
 
 <button (click)="sayHello()">Hazme Click</button>
 
-<h1>Desde app.component</h1>
+<h1>Eliminar Usuario</h1>
 <ul>
   <li *ngFor="let user of users">
     {{ user }} <button (click)="deleteUser(user)">Borrar Usuario</button>
   </li>
 </ul>
+
+<h1>Agregando nuevos usuarios</h1>
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser> <!--- el #newUser es como se envia la referencia  --->
+  <button>Agregar Usuario</button>
+</form>
+
