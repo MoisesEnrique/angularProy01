@@ -39,6 +39,9 @@ export class AppComponent {
   //  return true;
   //}
 
+  sayHello(){
+    alert("Hola desde app.component")
+  }
 
 
 }
