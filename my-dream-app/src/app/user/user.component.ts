@@ -13,4 +13,8 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sayHello(nameUser:any) { //para una alerta personalizada
+    alert("Hola " + nameUser);
+  }
+
 }
