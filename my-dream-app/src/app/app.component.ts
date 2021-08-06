@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({    //para trabajar componentes
   selector: 'app-root',  // para seleccionar la eiqueta en el index.html
@@ -10,6 +11,7 @@ export class AppComponent {
   users = ["Pablo", "Pedro", "Marcos", "Lucas"];   //lista de users
   activated = false;  // variable booleana
 
+  
   title = 'my-dream-app';
   name: string;   //definimos el tipo de la variable
   age: number;
@@ -18,13 +20,33 @@ export class AppComponent {
   hobbies: string[];  //arreglo de strings
   showHobbies: boolean;   //variable para usarlo con el boton
   
-  constructor() {   //constructor que se instancia al inicio
+
+
+  /*constructor() {   //constructor que se instancia al inicio
     this.name = 'Moises Enrique';    //definimos la variables
-    this.age = 42;
+    this.age = 25;
     this.email = 'moises@unsa.edu.pe';
     this.webpage = 'http://www.unsa.edu.pe';
     this.hobbies = ["Futbol", "Programacion", "Netflix"];   //para utilizar el for
     this.showHobbies = false;   //se inicia en falso para no mostrar hasta hacer click al boton
+  }*/
+
+  posts = [] as any;
+
+
+  constructor(private dataService: DataService) {
+    this.dataService.getData().subscribe(data => {
+      //console.log(data);
+      this.posts = data;
+    });
+
+    this.name = 'Moises Enrique';    //definimos la variables
+    this.age = 25;
+    this.email = 'moises@unsa.edu.pe';
+    this.webpage = 'http://www.unsa.edu.pe';
+    this.hobbies = ["Futbol", "Programacion", "Netflix"];   //para utilizar el for
+    this.showHobbies = false;   //se inicia en falso para no mostrar hasta hacer click al boton
+  
   }
 
   toggleHobbies() {   //El metodo niega al metodo mostrar hobbies
@@ -59,6 +81,8 @@ export class AppComponent {
     newUser.focus();
     return false;   //para no recargar la web
   }
+
+
 
 
 }
