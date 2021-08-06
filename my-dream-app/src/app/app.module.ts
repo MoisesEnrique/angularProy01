@@ -13,6 +13,7 @@ import { DataService } from './data.service';
 import { AboutComponent } from './about/about.component';
 
 import { RouterModule, Route } from '@angular/router';
+import { SafePipe } from './safe.pipe';
 
 const routes: Route[] = [
   {path: '', component: AppComponent},
@@ -25,7 +26,8 @@ const routes: Route[] = [
     AppComponent,
     HelloWorldComponent,
     UserComponent,
-    AboutComponent
+    AboutComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
