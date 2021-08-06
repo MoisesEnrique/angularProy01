@@ -14,6 +14,7 @@ import { AboutComponent } from './about/about.component';
 
 import { RouterModule, Route } from '@angular/router';
 import { SafePipe } from './safe.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Route[] = [
   {path: '', component: AppComponent},
@@ -35,6 +36,7 @@ const routes: Route[] = [
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
